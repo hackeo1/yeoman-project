@@ -1,5 +1,6 @@
 {
-  "name": "talos-practice-4",
+  "name": "yeoman-basic-project",
+  "version": "0.0.1",
   "private": true,
   "dependencies": {
     "bootstrap": "~4.0.0-alpha.6"
