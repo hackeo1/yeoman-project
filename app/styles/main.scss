@@ -1,9 +1,65 @@
+$color-primary: #63C6AE !default;
+$color-secondary: #E29E4A !default;
+$color-white: #FFF !default;
+$color-black: #606060 !default;
+$color-light-gray: #F9F9F9 !default;
+$brand-primary: $color-primary !default;
+$brand-info: $color-white !default;
 // bower:scss
 @import "bower_components/bootstrap/scss/bootstrap.scss";
 // endbower
 
 @import "fonts";
 @import "home";
+
+.btn {
+  border-width: 3px;
+  transition-duration: 0.5s;
+}
+
+button {
+  outline: 0;
+}
+
+.btn-lg {
+  padding: 0.75rem 2.5rem;
+}
+
+.btn-primary {
+  &:focus {
+    box-shadow: none;
+  }
+  &:visited {
+    color: $color-white;
+    background-color: $color-secondary;
+    border-color: $color-secondary;
+  }
+  &:hover {
+    color: $color-primary;
+    background-color: $color-white;
+    border-color: $color-white;
+  }
+  &:active {
+    color: $color-white;
+    background-color: $color-secondary;
+    border-color: darken($color-secondary, 15);
+  }
+}
+
+.btn-outline-info {
+  &:focus {
+    box-shadow: none;
+  }
+  &:hover {
+    color: $color-primary;
+    background-color: $color-white;
+  }
+  &:active {
+    color: $color-white;
+    background-color: $color-primary;
+    border-color: darken($color-primary, 15);
+  }
+}
 
 .browserupgrade {
   margin: 0.2em 0;
@@ -12,42 +68,12 @@
   padding: 0.2em 0;
 }
 
-/* Space out content a bit */
 body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   font-family:'Oxygen', sans-serif;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-right: 1rem;
-  padding-left: 1rem;
-}
-
-/* Custom page header */
-.header {
-  padding-bottom: 1rem;
-  border-bottom: .05rem solid #e5e5e5;
-}
-
-/* Make the masthead heading the same height as the navigation */
-.header h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 3rem;
-}
-
-/* Custom page footer */
-.footer {
-  padding-top: 1.5rem;
-  color: #777;
-  border-top: .05rem solid #e5e5e5;
+  position: relative;
 }
 
 /* Customize container */
@@ -56,43 +82,30 @@ body {
     max-width: 46rem;
   }
 }
-.container-narrow > hr {
-  margin: 2rem 0;
-}
 
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: .05rem solid #e5e5e5;
-}
-.jumbotron .btn {
-  padding: .75rem 1.5rem;
-  font-size: 1.5rem;
-}
-
-/* Supporting marketing content */
-.marketing {
-  margin: 3rem 0;
-}
-.marketing p + h4 {
-  margin-top: 1.5rem;
-}
-
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 48em) {
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-right: 0;
-    padding-left: 0;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 2rem;
-  }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
+/* Carousel animation fade */
+.carousel-fade {
+  .carousel-inner {
+    .carousel-item {
+      transition-property: opacity;
+      transition-duration: 1s;
+    }
+    .active + .carousel-item,
+    .active.carousel-item-left,
+    .active.carousel-item-right {
+      opacity: 0;
+    }
+    .carousel-item,
+    .carousel-item-next.carousel-item-left,
+    .carousel-item-prev.carousel-item-right {
+      opacity: 1;
+    }
+    .carousel-item-next,
+    .carousel-item-prev,
+    .active.carousel-item-left,
+    .active.carousel-item-right {
+      left: 0;
+      transform: translate3d(0, 0, 0);
+    }
   }
 }
