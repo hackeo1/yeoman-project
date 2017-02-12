@@ -17,6 +17,10 @@ $brand-info: $color-white !default;
   transition-duration: 0.5s;
 }
 
+button {
+  outline: 0;
+}
+
 .btn-lg {
   padding: 0.75rem 2.5rem;
 }
@@ -47,7 +51,8 @@ $brand-info: $color-white !default;
     box-shadow: none;
   }
   &:hover {
-    background-color: transparent;
+    color: $color-primary;
+    background-color: $color-white;
   }
   &:active {
     color: $color-white;
@@ -69,8 +74,6 @@ body {
   flex-direction: column;
   font-family:'Oxygen', sans-serif;
   position: relative;
-  /* Space out content a bit */
-  padding-bottom: 1.5rem;
 }
 
 /* Customize container */
