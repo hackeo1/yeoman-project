@@ -199,5 +199,112 @@ main section {
   }
   .img {
     margin-bottom: 30px;
+    button {
+      outline: 0;
+      opacity: 0;
+      position: absolute;
+      height: 100%;
+      padding: 0;
+      border: 0;
+      min-width: calc(100vw - 30px);
+      transition: opacity 0.4s ease-in-out;
+      .circule {
+        border-radius: 50%;
+        background-color: transparentize($color-white, 0.2);
+        width: 60px;
+        height: 60px;
+        margin: auto;
+        line-height: 62px;
+        font-size: 2.7rem;
+        color: transparentize($color-primary, 0.2);
+      }
+      h3 {
+        margin-top: 2rem;
+        font-size: 1.7em;
+        color: transparentize($color-white, 0.2);
+      }
+      h4 {
+        font-size: 1.3em;
+        color: transparentize($color-white, 0.2);
+      }
+      .inside {
+        transform: scale(0.9);
+        transition: all 0.4s ease-in-out;
+      }
+      @media screen and (min-width: 541px) {
+        min-width: 92.5%;
+      }
+      @media screen and (min-width: 768px) {
+        min-width: 87.7%;
+        .circule {
+          border-radius: 50%;
+          background-color: transparentize($color-white, 0.2);
+          width: 40px;
+          height: 40px;
+          margin: auto;
+          line-height: 42px;
+          font-size: 1.7rem;
+          color: transparentize($color-primary, 0.2);
+        }
+        h3 {
+          margin-top: 2rem;
+          font-size: 1em;
+          color: transparentize($color-white, 0.2);
+        }
+        h4 {
+          font-size: 0.7em;
+          color: transparentize($color-white, 0.2);
+        }
+      }
+      &:hover {
+        opacity: 1;
+        background-color: transparentize($color-primary, 0.2);
+        .inside {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+}
+
+.our-blog {
+  .item {
+    padding: 2rem 3rem;
+    margin-bottom: 30px;
+    background-color: $color-white;
+    background-position: 0 0;
+    transition: background-position 3s linear;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid $color-light-gray;
+    border-radius: 5px;
+    @media screen and (min-width: 768px) {
+      padding: 1rem 3rem;
+    }
+    &:hover {
+      background-image: url('../images/blog-img.jpg');
+      background-position: 0 100%;
+      h3 {
+        color: $color-primary;
+      }
+    }
+    .date {
+      font-size: 0.8em;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: transparentize($color-black, 0.2);
+    }
+    h3 {
+      transition: color 0.2s ease-in-out;
+      font-size: 1em;
+      font-weight: 700;
+      margin-bottom: 0.8rem;
+      color: $color-black;
+    }
+    h4 {
+      font-size: 0.6em;
+      font-weight: 700;
+      color: $color-black;
+    }
   }
 }
