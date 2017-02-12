@@ -1,12 +1,12 @@
 img {
   max-width: 100%;
 }
+
 .navbar-nav {
   width: 100%;
 }
 
 .over-header {
-  background-color: black;
   color: white;
   overflow: hidden;
   .title {
@@ -66,7 +66,7 @@ img {
   border-bottom: 1px solid transparentize(grayscale($color-primary), 0.9);
   background-color: $color-white;
   .title {
-    font-size: 2em;
+    font-size: 1.8em;
     font-weight: 700;
     margin: 1rem 0;
   }
@@ -99,6 +99,65 @@ img {
   &.navbar-light .navbar-nav .nav-link {
     &:hover, &.active {
       color: $color-primary;
+    }
+  }
+}
+
+main section {
+  padding: 6rem 0;
+  &:nth-child(even) {
+    background-color: $color-light-gray;
+  }
+}
+
+.what-we-do {
+  padding: 6rem 0;
+  p {
+    font-size: 0.8em;
+    color: transparentize($color-black, 0.2);
+  }
+  .title {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  .title {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  .paragraph {
+    margin-bottom: 4rem;
+  }
+  .item {
+    font-size: 0;
+    margin-top: 2rem;
+    h2 {
+      font-size: 1.2em;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+    .icon, .text-container{
+      font-size: 1rem;
+      display: inline-block;
+      box-sizing: border-box;
+    }
+    .icon {
+      width: 20%;
+      font-size: 1.8rem;
+      color: transparentize($color-black, 0.2);
+      vertical-align: top;
+      text-align: left;
+      @media screen and (max-width: 767px) {
+        width: 18%;
+        font-size: 2rem;
+      }
+    }
+    .text-container {
+      width: 80%;
+      @media screen and (max-width: 767px) {
+        width: 82%;
+      }
     }
   }
 }
