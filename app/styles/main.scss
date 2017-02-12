@@ -79,3 +79,30 @@ body {
     max-width: 46rem;
   }
 }
+
+/* Carousel animation fade */
+.carousel-fade {
+  .carousel-inner {
+    .carousel-item {
+      transition-property: opacity;
+      transition-duration: 1s;
+    }
+    .active + .carousel-item,
+    .active.carousel-item-left,
+    .active.carousel-item-right {
+      opacity: 0;
+    }
+    .carousel-item,
+    .carousel-item-next.carousel-item-left,
+    .carousel-item-prev.carousel-item-right {
+      opacity: 1;
+    }
+    .carousel-item-next,
+    .carousel-item-prev,
+    .active.carousel-item-left,
+    .active.carousel-item-right {
+      left: 0;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}
