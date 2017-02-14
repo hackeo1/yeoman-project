@@ -29,7 +29,7 @@ button {
   &:focus {
     box-shadow: none;
   }
-  &:visited {
+  &:focus {
     color: $color-white;
     background-color: $color-secondary;
     border-color: $color-secondary;
@@ -77,9 +77,9 @@ body {
 }
 
 /* Customize container */
-@media (min-width: 48em) {
+@media (min-width: 62em) {
   .container {
-    max-width: 46rem;
+    max-width: 60rem;
   }
 }
 
