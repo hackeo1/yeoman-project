@@ -9450,6 +9450,7 @@ img {
 
 .header .navbar-toggler {
   border: none;
+  outline: 0;
 }
 
 .header .navbar-toggler .navbar-toggler-icon {
@@ -9565,9 +9566,15 @@ main section .title {
   min-height: 400px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .genius-studio .video {
-    min-height: 250px;
+    min-height: 260px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .genius-studio .video {
+    min-height: 300px;
   }
 }
 
@@ -9585,6 +9592,39 @@ main section .title {
   font-size: 0.7em;
   font-weight: 700;
   color: inherit;
+}
+
+.team-member .item figure:hover .social-icons {
+  opacity: 0.1;
+}
+
+.team-member .item .social-icons {
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  opacity: 0;
+  position: absolute;
+  bottom: 6rem;
+  width: calc(100% - 30px);
+}
+
+.team-member .item .icon-social {
+  height: 3rem;
+  width: 3rem;
+  margin: 0 0.4rem;
+  background-color: black;
+  border-radius: 50%;
+  font-size: 1.3rem;
+}
+
+.team-member .item a {
+  color: #FFF;
+  display: block;
+  height: 100%;
+}
+
+.team-member .item a i {
+  line-height: 3rem;
+  vertical-align: bottom;
 }
 
 .last-work .paragraph {
@@ -9606,9 +9646,15 @@ main section .title {
   transition: all 0.4s ease-in-out;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .last-work .item-image {
-    height: 287px;
+    height: 315px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .last-work .item-image {
+    height: 445px;
   }
 }
 
@@ -9723,6 +9769,7 @@ main section .title {
 
 .our-blog .item {
   width: 100%;
+  height: calc(100% - 30px);
   padding: 2rem 3rem;
   margin-bottom: 30px;
   background-color: #FFF;
@@ -9785,6 +9832,7 @@ main section .title {
 
 .faq .header-card {
   cursor: default;
+  font-size: 0;
 }
 
 .faq .header-card .icon,
@@ -9793,14 +9841,16 @@ main section .title {
 }
 
 .faq .header-card .icon {
-  width: 30px;
-  font-size: 2em;
+  width: 45px;
+  font-size: 2rem;
   color: rgba(96, 96, 96, 0.8);
 }
 
 .faq .header-card .card-title {
-  margin-left: 30px;
-  font-size: 1.3em;
+  width: calc(100% - 45px);
+  margin-left: 0;
+  padding-left: 1rem;
+  font-size: 1.3rem;
   font-weight: 700;
 }
 
@@ -9909,12 +9959,12 @@ main section .title {
 }
 
 .footer .icon-social {
-  height: 35px;
-  width: 35px;
-  margin: 0 0.4rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  margin: 0 0.4rem 0.5rem;
   background-color: black;
   border-radius: 50%;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .footer a {
@@ -9924,7 +9974,7 @@ main section .title {
 }
 
 .footer a i {
-  line-height: 35px;
+  line-height: 2.5rem;
   vertical-align: bottom;
 }
 
@@ -9946,7 +9996,7 @@ button {
   box-shadow: none;
 }
 
-.btn-primary:visited {
+.btn-primary:focus {
   color: #FFF;
   background-color: #E29E4A;
   border-color: #E29E4A;
@@ -10000,9 +10050,9 @@ body {
 }
 
 /* Customize container */
-@media (min-width: 48em) {
+@media (min-width: 62em) {
   .container {
-    max-width: 46rem;
+    max-width: 60rem;
   }
 }
 
