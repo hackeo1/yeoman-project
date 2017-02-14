@@ -74,6 +74,7 @@ img {
   }
   .navbar-toggler {
     border: none;
+    outline: 0;
     .navbar-toggler-icon {
       background-image: url("data:image/svg+xml;charset=utf8,<svg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(99, 198, 174, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/></svg>");
     }
@@ -165,8 +166,11 @@ main section {
   }
   .video {
     min-height: 400px;
-    @media screen and (min-width: 768px) {
-      min-height: 250px;
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      min-height: 260px;
+    }
+    @media screen and (min-width: 992px) {
+      min-height: 300px;
     }
   }
 }
@@ -204,8 +208,11 @@ main section {
     background-repeat: no-repeat;
     background-size: cover;
     transition: all 0.4s ease-in-out;
-    @media screen and (min-width: 768px) {
-      height: 287px;
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      height: 315px;
+    }
+    @media screen and (min-width: 992px) {
+      height: 445px;
     }
   }
   .portfolio-1 {
@@ -302,6 +309,7 @@ main section {
   }
   .item {
     width: 100%;
+    height: calc(100% - 30px);
     padding: 2rem 3rem;
     margin-bottom: 30px;
     background-color: $color-white;
@@ -354,18 +362,21 @@ main section {
   }
   .header-card {
     cursor: default;
+    font-size: 0;
     .icon,
     .card-title {
       display: inline-block;
     }
     .icon {
-      width: 30px;
-      font-size: 2em;
+      width: 45px;
+      font-size: 2rem;
       color: transparentize($color-black, 0.2);
     }
     .card-title {
-      margin-left: 30px;
-      font-size: 1.3em;
+      width: calc(100% - 45px);
+      margin-left: 0;
+      padding-left: 1rem;
+      font-size: 1.3rem;
       font-weight: 700;
     }
   }
