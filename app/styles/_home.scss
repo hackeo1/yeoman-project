@@ -190,6 +190,35 @@ main section {
       font-weight: 700;
       color: inherit;
     }
+    figure:hover {
+      .social-icons {
+        opacity: 0.1;
+      }
+    }
+    .social-icons {
+      transition: all 0.4s ease-in-out;
+      opacity: 0;
+      position: absolute;
+      bottom: 6rem;
+      width: calc(100% - 30px);
+    }
+    .icon-social {
+      height: 3rem;
+      width: 3rem;
+      margin: 0 0.4rem;
+      background-color: black;
+      border-radius: 50%;
+      font-size: 1.3rem;
+    }
+    a {
+      color: $color-white;
+      display: block;
+      height: 100%;
+      i {
+        line-height: 3rem;
+        vertical-align: bottom;
+      }
+    }
   }
 }
 
@@ -470,19 +499,19 @@ main section {
     color: white;
   }
   .icon-social {
-    height: 35px;
-    width: 35px;
-    margin: 0 0.4rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    margin: 0 0.4rem 0.5rem;
     background-color: black;
     border-radius: 50%;
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   a {
     color: inherit;
     display: block;
     height: 100%;
     i {
-      line-height: 35px;
+      line-height: 2.5rem;
       vertical-align: bottom;
     }
   }
